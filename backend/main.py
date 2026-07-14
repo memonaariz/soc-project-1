@@ -32,4 +32,4 @@ app.include_router(dashboard.router)
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "service": "SOC Copilot
+    return {"status": "ok", "service": "SOC Copilot"}
