@@ -6,7 +6,7 @@ from app.routers import auth, triage, cases, enrichment, dashboard
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_db()
+    await init_db(
     yield
 
 app = FastAPI(
