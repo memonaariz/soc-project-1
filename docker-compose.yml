@@ -1,4 +1,4 @@
-version "3.0"
+version: "3.0"
 
 services:
   backend:
@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env
+      - ./backend/env
     volumes:
       - ./backend:/app
     restart: unless-stopped
