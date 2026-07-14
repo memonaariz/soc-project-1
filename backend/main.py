@@ -6,7 +6,7 @@ from app.routers import auth, triage, cases, enrichment, dashboard
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_db(
+    await init_db()
     yield
 
 app = FastAPI(
@@ -32,4 +32,4 @@ app.include_router(dashboard.router)
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "service": "SOC Copilot"}
+    return {"status": "ok", "service": "SOC Copilot
